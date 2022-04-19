@@ -208,26 +208,26 @@ describe('Parsing names', function() {
     ];
 
     it('Should parse all name attributes', function() {
-        names.forEach(function(name, i, list){
-            var parsed = human.parseName(name.name);
+        names.forEach(function(test){
+            var parsed = human.parseName(test.name);
 
-            expect(name.result).to.eql(parsed);
+            expect(parsed).to.eql(test.result);
         });
     });
 
     it('Should parse fullest name', function() {
-        fullest.forEach(function(name, i, list){
-            var fullName = human.getFullestName(name.name);
+        fullest.forEach(function(test){
+            var fullName = human.getFullestName(test.name);
 
-            expect(name.result.fullName).to.eql(fullName);
+            expect(fullName).to.eql(test.result.fullName);
         });
     });
 
     it('Should parse all address attributes', function() {
-        addresses.forEach(function(address, i, list){
-            var parsed = human.parseAddress(address.address);
+        addresses.forEach(function(test){
+            var parsed = human.parseAddress(test.address);
 
-            expect(address.result).to.eql(parsed);
+            expect(parsed).to.eql(test.result);
         });
     });
 });
