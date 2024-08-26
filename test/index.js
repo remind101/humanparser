@@ -211,7 +211,7 @@ describe('Parsing names', function() {
         names.forEach(function(name, i, list){
             var parsed = human.parseName(name.name);
 
-            expect(name.result).to.eql(parsed);
+            expect(parsed).to.eql(name.result);
         });
     });
 
@@ -219,7 +219,7 @@ describe('Parsing names', function() {
         fullest.forEach(function(name, i, list){
             var fullName = human.getFullestName(name.name);
 
-            expect(name.result.fullName).to.eql(fullName);
+            expect(fullName).to.eql(name.result.fullName);
         });
     });
 
@@ -227,7 +227,7 @@ describe('Parsing names', function() {
         addresses.forEach(function(address, i, list){
             var parsed = human.parseAddress(address.address);
 
-            expect(address.result).to.eql(parsed);
+            expect(parsed).to.eql(address.result);
         });
     });
 });

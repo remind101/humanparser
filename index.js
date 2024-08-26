@@ -8,7 +8,7 @@ parser.parseName = function (name) {
     var compound = ['vere', 'von', 'van', 'de', 'del', 'della', 'der', 'di', 'da', 'pietro', 'vanden', 'du', 'st.', 'st', 'la', 'lo', 'ter', 'bin', 'ibn', 'te', 'ten', 'op', 'ben'];
 
     var parts = name.trim().split(/\s+/);
-		var attrs = {};
+	var attrs = {};
 
     if (!parts.length) {
         return attrs;
